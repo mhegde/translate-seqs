@@ -31,7 +31,7 @@ def read_codon_map(file):
     return codon_map
 
 
-def translate(input_df, frame, w )
+def translate(input_df, frame, codon_map, w):
     for i, r in input_df.iterrows():
         seq = r[0]
         aa = ''
@@ -57,6 +57,7 @@ if __name__ == '__main__':
     with open(outputfile,'w') as o:
         w = csv.writer(o,delimiter='\t')
         w.writerow((colnames))
+        translate(input_df, frame, codon_map, w)
 
 
 
