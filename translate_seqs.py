@@ -45,7 +45,7 @@ def translate(input_df, frame, codon_map, w):
                 break
         row = list(r)
         row.append(aa)
-        w.writerow((row)
+        w.writerow((row))
     return
 
 
